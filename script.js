@@ -9,14 +9,8 @@ var confirmNumber;
 var confirmSpecial;
 
 var lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var blankUpper = [];
-var toUpper = function (x) {
-  return x.toUpperCase();
-};
-
-upperCase = lowerCase.map(toUpper);
-
-var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 
 // prompts
@@ -30,13 +24,13 @@ userInput =[];
 
 // prompts pt.2
 else { 
-  confirmLower = confirm("Will this contain lower case letters?");
+  confirmLower = confirm("Lowercase?");
   console.log("Lower case " + confirmLower);
-  confirmUpper = confirm("Will this contain upper case letters?");
+  confirmUpper = confirm("Uppercase?");
   console.log("Upper case " + confirmUpper);
-  confirmNumber = confirm("Will this contain numbers?");
+  confirmNumber = confirm("Numbers?");
   console.log("Number " + confirmNumber);
-  confirmSpecial = confirm("Will this contain special characters?");
+  confirmSpecial = confirm("Symbols?");
   console.log("Special Character " + confirmSpecial);
 
 };
@@ -54,6 +48,7 @@ function writePassword() {
   passwordText.value = password;
 
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
