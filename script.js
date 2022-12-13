@@ -18,6 +18,18 @@ upperCase = lowerCase.map(toUpper);
 var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 
+// prompts
+userInput =[];
+ 
+  userSelect = window.prompt("Choose how many characters your password will be. (8-128)");
+
+  if (userSelect < 8 || userSelect > 128) {
+    alert ("Only input the following values: 8-128")
+    return false;
+  }
+
+
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
